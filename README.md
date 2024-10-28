@@ -1,7 +1,16 @@
 
 # Vig3n3r3 - A Python Vigenère Cipher Cracking Tool
 
-![Top Banner](screenshot_top_banner.png)
+
+```python
+██╗   ██╗██╗ ██████╗ ███████╗███╗   ██╗███████╗██████╗ ███████╗    ██████╗ ██╗   ██╗    ██╗ ██████╗██╗  ██╗██████╗ ██╗   ██╗███████╗       ██╗ 
+██║   ██║██║██╔════╝ ██╔════╝████╗  ██║██╔════╝██╔══██╗██╔════╝    ██╔══██╗╚██╗ ██╔╝    ██║██╔════╝██║  ██║██╔══██╗██║   ██║██╔════╝    ██╗╚██╗
+██║   ██║██║██║  ███╗█████╗  ██╔██╗ ██║█████╗  ██████╔╝█████╗      ██████╔╝ ╚████╔╝     ██║██║     ███████║██████╔╝██║   ██║███████╗    ╚═╝ ██║
+╚██╗ ██╔╝██║██║   ██║██╔══╝  ██║╚██╗██║██╔══╝  ██╔══██╗██╔══╝      ██╔══██╗  ╚██╔╝      ██║██║     ╚════██║██╔══██╗██║   ██║╚════██║    ▄█╗ ██║
+ ╚████╔╝ ██║╚██████╔╝███████╗██║ ╚████║███████╗██║  ██║███████╗    ██████╔╝   ██║       ██║╚██████╗     ██║██║  ██║╚██████╔╝███████║    ▀═╝██╔╝
+  ╚═══╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚══════╝    ╚═════╝    ╚═╝       ╚═╝ ╚═════╝     ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝       ╚═╝
+```
+
 
 ## About Vig3n3r3
 Vig3n3r3 is a Python-based cryptography tool designed to encrypt, decrypt, and crack Vigenère cipher-encrypted messages using various cryptanalysis methods like brute force, dictionary attacks, and crib attacks. This project is built as a tribute to one of history's most famous ciphers and demonstrates how modern techniques can unravel what was once thought to be unbreakable.
@@ -41,12 +50,7 @@ The project does not require any external Python packages. Just ensure you are u
 python --version
 ```
 
-### 3. Prepare n-grams and dictionary files
-
-- Add the required n-grams files (`english_monograms.txt`, `english_bigrams.txt`, `english_trigrams.txt`, `english_quadgrams.txt`) in the project root directory.
-- Include a wordlist file (`words.txt`) for dictionary attacks.
-
-### 4. Run the script
+### 3. Run the script
 
 To run the script, use the following command:
 
@@ -55,7 +59,7 @@ python vig3n3r3.py "CIPHERTEXT" --method METHOD_NUMBER --keylength LENGTH --crib
 ```
 
 - `CIPHERTEXT`: The encrypted message.
-- `METHOD_NUMBER`: Choose from `1` (dictionary), `2` (brute force), or `3` (crib attack).
+- `METHOD_NUMBER`: Choose from `1` (dictionary), `2` (brute force), `3` (crib attack), etc..
 - `LENGTH`: The length of the key (required for methods 1 and 2).
 - `KNOWN_PLAINTEXT`: The known part of the plaintext (required for method 3).
 
@@ -85,14 +89,6 @@ python vig3n3r3.py "KXRKGIKXBKAL" --method 3 --crib "ATTACK"
 
 This will attempt to find the key by using "ATTACK" as known plaintext.
 
-## Screenshots
-
-### Top Banner
-![Top Banner](screenshot_top_banner.png)
-
-### Success Banner
-![Success Banner](screenshot_success_banner.png)
-
 ## Citing Data Sources
 
 - The **wordlist** for the dictionary attack was sourced from the [Openwall wordlists](https://www.openwall.com/wordlists/).
@@ -100,7 +96,7 @@ This will attempt to find the key by using "ATTACK" as known plaintext.
 
 ## Contributing
 
-We welcome contributions! Please feel free to submit a pull request or open an issue if you'd like to improve or fix something.
+Welcoming contributions! Please feel free to submit a pull request or open an issue if you'd like to improve or fix something.
 
 ### Instructions for contributing:
 1. Fork the repository.
@@ -113,33 +109,13 @@ We welcome contributions! Please feel free to submit a pull request or open an i
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Link to Medium Article
-For a detailed breakdown of the history behind the Vigenère cipher, modern cryptography techniques, and the story of Vig3n3r3, read our [Medium article here](https://medium.com/your-link-to-article).
+For a detailed breakdown of the history behind the Vigenère cipher, modern cryptography techniques, and the story of Vig3n3r3, read our [Medium article here](https://medium.com/your-link-to-article](https://medium.com/@jamesjinghuang/the-vigen%C3%A8re-cipher-from-unbreakable-enigma-to-cryptographic-relic-215761d30af8).
 
-# ASCII Art Banner for the top
 ```python
-def display_top_banner():
-    banner = """
-██╗   ██╗██╗ ██████╗ ███████╗███╗   ██╗███████╗██████╗ ███████╗    ██████╗ ██╗   ██╗    ██╗ ██████╗██╗  ██╗██████╗ ██╗   ██╗███████╗       ██╗ 
-██║   ██║██║██╔════╝ ██╔════╝████╗  ██║██╔════╝██╔══██╗██╔════╝    ██╔══██╗╚██╗ ██╔╝    ██║██╔════╝██║  ██║██╔══██╗██║   ██║██╔════╝    ██╗╚██╗
-██║   ██║██║██║  ███╗█████╗  ██╔██╗ ██║█████╗  ██████╔╝█████╗      ██████╔╝ ╚████╔╝     ██║██║     ███████║██████╔╝██║   ██║███████╗    ╚═╝ ██║
-╚██╗ ██╔╝██║██║   ██║██╔══╝  ██║╚██╗██║██╔══╝  ██╔══██╗██╔══╝      ██╔══██╗  ╚██╔╝      ██║██║     ╚════██║██╔══██╗██║   ██║╚════██║    ▄█╗ ██║
- ╚████╔╝ ██║╚██████╔╝███████╗██║ ╚████║███████╗██║  ██║███████╗    ██████╔╝   ██║       ██║╚██████╗     ██║██║  ██║╚██████╔╝███████║    ▀═╝██╔╝
-  ╚═══╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚══════╝    ╚═════╝    ╚═╝       ╚═╝ ╚═════╝     ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝       ╚═╝
-    """
-    print(banner)
-
-# ASCII Art Banner for success
-def display_success_banner(key):
-    banner = f"""
 ███████╗██╗   ██╗ ██████╗ ██████╗██████╗ ███████╗███████╗
 ██╔════╝██║   ██║██╔════╝██╔════╝╚════██╗██╔════╝██╔════╝
 ███████╗██║   ██║██║     ██║      █████╔╝███████╗███████╗
 ╚════██║██║   ██║██║     ██║      ╚═══██╗╚════██║╚════██║
 ███████║╚██████╔╝╚██████╗╚██████╗██████╔╝███████║███████║
-
-      Key Cracked: {key}
-      Cipher Successfully Decrypted! 🕵️‍♂️
-    """
-    print(banner)
 ```
 
