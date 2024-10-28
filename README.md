@@ -1,7 +1,6 @@
 
 # Vig3n3r3 - A Python Vigenère Cipher Cracking Tool
 
-
 ```python
 ██╗   ██╗██╗ ██████╗ ███████╗███╗   ██╗███████╗██████╗ ███████╗    ██████╗ ██╗   ██╗    ██╗ ██████╗██╗  ██╗██████╗ ██╗   ██╗███████╗       ██╗ 
 ██║   ██║██║██╔════╝ ██╔════╝████╗  ██║██╔════╝██╔══██╗██╔════╝    ██╔══██╗╚██╗ ██╔╝    ██║██╔════╝██║  ██║██╔══██╗██║   ██║██╔════╝    ██╗╚██╗
@@ -10,7 +9,6 @@
  ╚████╔╝ ██║╚██████╔╝███████╗██║ ╚████║███████╗██║  ██║███████╗    ██████╔╝   ██║       ██║╚██████╗     ██║██║  ██║╚██████╔╝███████║    ▀═╝██╔╝
   ╚═══╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚══════╝    ╚═════╝    ╚═╝       ╚═╝ ╚═════╝     ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝       ╚═╝
 ```
-
 
 ## About Vig3n3r3
 Vig3n3r3 is a Python-based cryptography tool designed to encrypt, decrypt, and crack Vigenère cipher-encrypted messages using various cryptanalysis methods like brute force, dictionary attacks, and crib attacks. This project is built as a tribute to one of history's most famous ciphers and demonstrates how modern techniques can unravel what was once thought to be unbreakable.
@@ -59,7 +57,7 @@ python vig3n3r3.py "CIPHERTEXT" --method METHOD_NUMBER --keylength LENGTH --crib
 ```
 
 - `CIPHERTEXT`: The encrypted message.
-- `METHOD_NUMBER`: Choose from `1` (dictionary), `2` (brute force), `3` (crib attack), etc..
+- `METHOD_NUMBER`: Choose from `1` (dictionary), `2` (brute force), `3` (crib attack), etc.
 - `LENGTH`: The length of the key (required for methods 1 and 2).
 - `KNOWN_PLAINTEXT`: The known part of the plaintext (required for method 3).
 
@@ -91,8 +89,8 @@ This will attempt to find the key by using "ATTACK" as known plaintext.
 
 ## Citing Data Sources
 
-- The **wordlist** for the dictionary attack was sourced from the [Openwall wordlists](https://www.openwall.com/wordlists/).
-- The **monograms, bigrams, trigrams, and quadgrams** data used for frequency analysis were obtained from publicly available English text datasets, including Google's N-gram dataset.
+- The **wordlist** for the dictionary attack was sourced from the [enable1.txt wordlist](https://github.com/dolph/dictionary/blob/master/enable1.txt), a popular open-source wordlist.
+- The **monograms, bigrams, trigrams, and quadgrams** data used for frequency analysis were obtained from [Peter Norvig's Ngram Data](https://norvig.com/ngrams/).
 
 ## Contributing
 
@@ -109,13 +107,10 @@ Welcoming contributions! Please feel free to submit a pull request or open an is
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Link to Medium Article
-For a detailed breakdown of the history behind the Vigenère cipher, modern cryptography techniques, and the story of Vig3n3r3, read our [Medium article here](https://medium.com/your-link-to-article](https://medium.com/@jamesjinghuang/the-vigen%C3%A8re-cipher-from-unbreakable-enigma-to-cryptographic-relic-215761d30af8).
+For a detailed breakdown of the history behind the Vigenère cipher, modern cryptography techniques, and the story of Vig3n3r3, read my article on Medium: [The Vigenère Cipher: From Unbreakable Enigma to Cryptographic Relic](https://medium.com/@jamesjinghuang/the-vigen%C3%A8re-cipher-from-unbreakable-enigma-to-cryptographic-relic-215761d30af8).
 
 ```python
 ███████╗██╗   ██╗ ██████╗ ██████╗██████╗ ███████╗███████╗
 ██╔════╝██║   ██║██╔════╝██╔════╝╚════██╗██╔════╝██╔════╝
 ███████╗██║   ██║██║     ██║      █████╔╝███████╗███████╗
-╚════██║██║   ██║██║     ██║      ╚═══██╗╚════██║╚════██║
-███████║╚██████╔╝╚██████╗╚██████╗██████╔╝███████║███████║
 ```
-
